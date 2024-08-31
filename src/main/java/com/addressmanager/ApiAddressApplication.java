@@ -1,4 +1,4 @@
-package com.addressmanager.Api_Address;
+package com.addressmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
