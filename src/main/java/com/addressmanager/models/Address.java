@@ -25,7 +25,7 @@ public class Address {
     private String state;
     private String country;
     private String zipCode;
-    @ManyToMany
+    @ManyToOne
     private User user;
-    
+
 }
