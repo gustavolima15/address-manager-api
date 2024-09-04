@@ -14,4 +14,16 @@ public class UserServices {
         User save = userRepository.save(user);
         return save;
     }
+
+    public User getUserById(Long id) {
+        return userRepository.findById(id).get();
+    }
+
+    public User updatUser(User user) {
+        return userRepository.save(user);
+    }
+
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
 }

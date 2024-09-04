@@ -1,11 +1,10 @@
 package com.addressmanager.models;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @Entity
 @Table(name = "usuario", uniqueConstraints = {
@@ -27,4 +26,9 @@ public class User {
 
     @Column(nullable = false, length = 100)
     private String senha;
+
+    // Relacionamento com a entidade Address
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Address> enderecos;
+
 }
